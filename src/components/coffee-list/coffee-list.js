@@ -12,7 +12,7 @@ class CoffeeList extends Component {
 
         const elements = products.map(item => {
             const{id, ...itemProps} = item;
-            return <CoffeeListItem key={id} {...itemProps}/>
+            return <CoffeeListItem key={id} id={id} {...itemProps}/>
         })
 
         return(

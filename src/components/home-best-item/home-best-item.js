@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
+
 import "./home-best-item.scss";
 
-const HomeBestItem = ({img, name, price}) => {
+const HomeBestItem = ({img, name, price, id}) => {
     return(
-        <div className="best__item">
+        <Link to={`/products/${id}`} className="best__item">
             <img src={img} alt="coffe" className="best__item__img"/>
             <div className="best__item__title">{name}</div>
             <div className="best__item__price">{`${price}$`}</div>
-        </div>
+        </Link>
     )
 }
 

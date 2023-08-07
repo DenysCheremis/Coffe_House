@@ -5,7 +5,7 @@ const HomeBest = ({products}) => {
 
     const elements = products.map(item => {
         const{id, ...itemProps} = item;
-        return <HomeBestItem key={id} {...itemProps}/>
+        return <HomeBestItem key={id} id={id} {...itemProps}/>
     })
 
     return(
