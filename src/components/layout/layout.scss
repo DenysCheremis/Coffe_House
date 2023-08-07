@@ -1,0 +1,40 @@
+.header, .footer{
+    top: 52px;
+    left: 180px;
+    position: absolute;
+    &__link{
+        margin: 0 20px 0 20px;
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+        &:first-child{
+            position: relative;
+            &::before{
+                content: '';
+                background-image: url(../../icons/coffee-beans.svg);
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: -30px;
+                top: -23px;
+            }
+        }
+    }
+}
+.footer{
+    padding-top: 52px;
+    position: static;
+    height: 150px;
+    margin: 0;
+    text-align: center;
+    &__link{
+        color: #000;
+        &:first-child{
+            margin-left: 50px;
+            &::before{
+                background-image: url(../../icons/coffee-beans-black.svg);
+            }
+        }
+    }
+}

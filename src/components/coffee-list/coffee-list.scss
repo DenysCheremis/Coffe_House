@@ -1,0 +1,9 @@
+.coffee-list{
+    padding: 60px 0 30px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Три елементи в рядку */
+        grid-gap: 70px;
+        grid-row-gap: 60px;
+    }
+}

@@ -1,0 +1,12 @@
+.best{
+    padding: 80px 0 110px 0;
+    min-height: 495px;
+    width: 100%;
+    background: no-repeat center/cover url("../../img/best-bg.jpg");
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

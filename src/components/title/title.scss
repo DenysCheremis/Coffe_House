@@ -1,0 +1,17 @@
+.coffee{
+    padding-top: 130px;
+    min-height: 260px;
+    background: no-repeat center/cover url("../../img/coffee-bg.jpg");
+    text-align: center;
+    &__title{
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &_pleasure{
+        padding-top: 130px;
+        min-height: 260px;
+        background: no-repeat center/cover url("../../img/pleasure-bg.jpg");
+        text-align: center;
+    }
+}
