@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useHttp } from '../../hooks/http.hook';
+import { Helmet } from 'react-helmet';
 
 import Title from '../../components/title/Title';
 
@@ -19,8 +20,8 @@ const ProductDetails = () => {
             try {
                 const productsResponse = await request("http://localhost:3001/products");
                 const bestProductsResponse = await request("http://localhost:3001/productsBest");
-                const mergedProducts = [...productsResponse, ...bestProductsResponse];
-                const foundProduct = mergedProducts.find(item => item.id === +id);
+                const allProducts = [...productsResponse, ...bestProductsResponse];
+                const foundProduct = allProducts.find(item => item.id === +id);
 
                 if (foundProduct) {
                     setProduct(foundProduct);
@@ -34,7 +35,7 @@ const ProductDetails = () => {
         };
 
         fetchProduct();
-    }, [id, request]);
+    }, [id]);
 
     if (!product) {
         return <div>Product not found</div>;
@@ -42,6 +43,10 @@ const ProductDetails = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content={`${product.name} comics book`} />
+                <title>{product.name}</title>
+            </Helmet>
             <Title content="Our Coffee" clazz="coffee" />
             <div className="container">
                 <div className='product-details' key={id} id={id}>

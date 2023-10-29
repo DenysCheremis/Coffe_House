@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoffee } from '../../components/coffeeList/coffeeSlice';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Title from "../../components/title/Title";
 import PleasureAbout from "../../components/pleasureAbout/PleasureAbout";
@@ -18,6 +19,10 @@ const ForYourPleasure = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="For your pleasure" />
+                <title>For your pleasure</title>
+            </Helmet>
             <Title
                 content="For your pleasure"
                 clazz="coffee_pleasure" />
