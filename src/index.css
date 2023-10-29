@@ -11,13 +11,17 @@ code {
     monospace;
 }
 
-*{
+* {
   font-family: 'Merienda', cursive;
 }
 
-.title{
+.title {
   color: #000;
   font-size: 24px;
   font-weight: 400;
   text-align: center;
+}
+
+.title_mb40 {
+  margin-bottom: 40px;
 }

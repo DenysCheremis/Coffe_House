@@ -1,0 +1,96 @@
+{
+    "products": [
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Solimo Coffee Beans 2 kg",
+            "country": "Brazil",
+            "price": "10.73",
+            "id": 1,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Presto Coffee Beans 1 kg",
+            "country": "Kenya",
+            "price": "15.99",
+            "id": 2,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "AROMISTICO Coffee 1 kg",
+            "country": "Columbia",
+            "price": "6.99",
+            "id": 3,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Solimo Coffee Beans 2 kg",
+            "country": "Kenya",
+            "price": "10.73",
+            "id": 4,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Presto Coffee Beans 1 kg",
+            "country": "Columbia",
+            "price": "15.99",
+            "id": 5,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "AROMISTICO Coffee 1 kg",
+            "country": "Brazil",
+            "price": "6.99",
+            "id": 6,
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "normal"
+        }
+    ],
+    "productsBest": [
+        {
+            "img": "/static/media/solimo.b1df7571d5a1c7eefd75.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Solimo Coffee Beans 2 kg",
+            "price": "10.73",
+            "id": 7,
+            "country": "Kenya",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "best"
+        },
+        {
+            "img": "/static/media/presto.c664e36bbd5222d8367e.jpg",
+            "detailsImg": "detailsImage",
+            "name": "Presto Coffee Beans 1 kg",
+            "price": "15.99",
+            "id": 8,
+            "country": "Brazil",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "best"
+        },
+        {
+            "img": "/static/media/aromatico.32e37c629201e85029a2.jpg",
+            "detailsImg": "detailsImage",
+            "name": "AROMISTICO Coffee 1 kg",
+            "price": "6.99",
+            "id": 9,
+            "country": "Columbia",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "productType": "best"
+        }
+    ]
+}
