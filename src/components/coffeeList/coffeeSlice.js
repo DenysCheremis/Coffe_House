@@ -5,7 +5,8 @@ const initialState = {
     coffee: [],
     bestCoffee: [],
     coffeeLoadingStatus: 'idle',
-    bestCoffeeLoadingStatus: 'idle'
+    bestCoffeeLoadingStatus: 'idle',
+    btnContent: 'Load more'
 };
 
 export const fetchCoffee = createAsyncThunk(
@@ -27,7 +28,10 @@ export const fetchBestCoffee = createAsyncThunk(
 const coffeeSlice = createSlice({
     name: 'coffee',
     initialState,
-    reducers: {},
+    reducers: {
+        setBtnContentToAllProducts: (state) => { state.btnContent = 'These are all products' },
+        setBtnContentToLoadMore: (state) => { state.btnContent = 'Load More' }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchCoffee.pending, state => { state.coffeeLoadingStatus = 'loading' })
@@ -49,6 +53,7 @@ const coffeeSlice = createSlice({
     }
 });
 
-const { reducer } = coffeeSlice;
+const { reducer, actions } = coffeeSlice;
 
 export default reducer;
+export const { setBtnContentToAllProducts, setBtnContentToLoadMore } = actions;
