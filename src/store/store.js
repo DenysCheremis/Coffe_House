@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import coffee from '../components/coffeeList/coffeeSlice'
+import coffee from '../components/coffeeList/coffeeSlice';
+import cart from '../pages/cartPage/cartSlice';
 
 
 const stringMiddleware = () => (next) => (action) => {
@@ -12,7 +13,7 @@ const stringMiddleware = () => (next) => (action) => {
 };
 
 const store = configureStore({
-    reducer: { coffee },
+    reducer: { coffee, cart },
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
     devTools: process.env.NODE_ENV !== 'production',
 })

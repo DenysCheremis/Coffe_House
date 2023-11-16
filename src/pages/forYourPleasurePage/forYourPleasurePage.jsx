@@ -6,15 +6,16 @@ import { Helmet } from 'react-helmet';
 import Title from "../../components/title/Title";
 import PleasureAbout from "../../components/pleasureAbout/PleasureAbout";
 import CoffeeList from '../../components/coffeeList/CoffeeList';
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
-const ForYourPleasure = () => {
+const ForYourPleasurePage = () => {
 
     const dispatch = useDispatch();
     const coffee = useSelector(state => state.coffee.coffee)
 
     useEffect(() => {
         dispatch(fetchCoffee());
-        // eslint-disable-next-line
     }, []);
 
     return (
@@ -23,13 +24,15 @@ const ForYourPleasure = () => {
                 <meta name="description" content="For your pleasure" />
                 <title>For your pleasure</title>
             </Helmet>
+            <Header />
             <Title
                 content="For your pleasure"
                 clazz="coffee_pleasure" />
             <PleasureAbout />
             <CoffeeList products={coffee} />
+            <Footer />
         </>
     )
 }
 
-export default ForYourPleasure;
+export default ForYourPleasurePage;

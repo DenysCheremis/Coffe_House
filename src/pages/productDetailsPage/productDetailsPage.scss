@@ -38,7 +38,6 @@
     }
 
     &__price {
-        margin-top: 16px;
         color: #000;
         font-size: 24px;
         font-weight: 400;
@@ -48,5 +47,42 @@
             font-size: 14px;
             font-weight: 700;
         }
+    }
+
+    &__wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn {
+        margin-right: 30px;
+        width: 165px;
+        height: 35px;
+        border-radius: 3px;
+        border: 1px solid #997F57;
+        color: #997F57;
+        background: transparent;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            background: #997F57;
+            color: #FFF;
+        }
+    }
+}
+
+.added {
+    background-color: #44944A;
+    border: 1px solid #44944A;
+    color: white;
+
+    &:hover {
+        background-color: #44944A;
     }
 }

@@ -15,7 +15,6 @@ const HomeBest = () => {
 
     useEffect(() => {
         dispatch(fetchBestCoffee());
-        // eslint-disable-next-line
     }, []);
 
 

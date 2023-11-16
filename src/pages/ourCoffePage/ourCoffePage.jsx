@@ -9,10 +9,12 @@ import CoffeeAbout from '../../components/coffeeAbout/CoffeeAbout';
 import SearchPanel from '../../components/searchPanel/SearchPanel';
 import Filter from '../../components/filter/Filter';
 import CoffeeList from '../../components/coffeeList/CoffeeList';
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
-import './ourCoffe.scss';
+import './ourCoffePage.scss';
 
-const OurCoffe = () => {
+const OurCoffePage = () => {
     const [filter, setFilter] = useState("");
     const [term, setTerm] = useState("");
     const dispatch = useDispatch();
@@ -20,7 +22,6 @@ const OurCoffe = () => {
 
     useEffect(() => {
         dispatch(fetchCoffee());
-        // eslint-disable-next-line
     }, []);
 
     const onUpdateSearch = (term) => {
@@ -64,6 +65,7 @@ const OurCoffe = () => {
                 <meta name="description" content="Our Coffee" />
                 <title>Our Coffee</title>
             </Helmet>
+            <Header />
             <Title
                 content="Our Coffee"
                 clazz="coffee" />
@@ -76,9 +78,10 @@ const OurCoffe = () => {
                     filter={filter} />
             </section>
             <CoffeeList products={visibleProducts} />
+            <Footer />
         </>
     )
 
 }
 
-export default OurCoffe;
+export default OurCoffePage;

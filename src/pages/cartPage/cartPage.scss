@@ -1,0 +1,13 @@
+.cart-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+        padding-top: 40px;
+        min-height: 135px;
+        background: no-repeat center/cover url("../../img/cart-bg.jpg");
+        text-align: center;
+    }
+}

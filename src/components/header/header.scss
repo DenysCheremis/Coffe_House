@@ -1,0 +1,59 @@
+.header {
+    top: 52px;
+    left: 180px;
+    position: absolute;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+        margin: 0 20px 0 20px;
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:first-child {
+            position: relative;
+
+            &::before {
+                content: '';
+                background-image: url(../../icons/coffee-beans.svg);
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: -30px;
+                top: -23px;
+            }
+        }
+    }
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: solid 1px #FFF;
+    border-radius: 7px;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &__img {
+        width: 65%;
+    }
+
+    &__counter {
+        position: absolute;
+        top: 14px;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 12px;
+    }
+}

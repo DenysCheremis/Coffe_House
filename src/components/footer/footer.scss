@@ -1,0 +1,23 @@
+.footer {
+    margin-top: 52px;
+    height: 100px;
+    text-align: center;
+
+    &__link {
+        margin: 0 20px 0 20px;
+        color: #000;
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration: none;
+
+        &::before {
+            content: '';
+            background-image: url(../../icons/coffee-beans-black.svg);
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: -30px;
+            top: -23px;
+        }
+    }
+}
