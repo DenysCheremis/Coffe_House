@@ -55,26 +55,6 @@
         justify-content: space-between;
         align-items: center;
     }
-
-    &__btn {
-        margin-right: 30px;
-        width: 165px;
-        height: 35px;
-        border-radius: 3px;
-        border: 1px solid #997F57;
-        color: #997F57;
-        background: transparent;
-        font-size: 12px;
-        font-weight: 700;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.2s;
-
-        &:hover {
-            background: #997F57;
-            color: #FFF;
-        }
-    }
 }
 
 .added {

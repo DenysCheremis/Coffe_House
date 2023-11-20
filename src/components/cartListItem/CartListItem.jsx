@@ -1,33 +1,19 @@
 import bin from '../../icons/bin.svg'
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { removeFromCart, updateTotalItems, addToCart, removeOneItemFromCart } from '../../pages/cartPage/cartSlice';
+import { removeFromCart, updateTotalItems } from '../../pages/cartPage/cartSlice';
+
+import QuantitySelector from '../quantitySelector/QuantitySelector';
 
 import './cartListItem.scss';
 
 
 const CartListItem = ({ name, country, img, price, id, quantity }) => {
     const dispatch = useDispatch();
-    const product = { name, country, img, price, id };
-
-    useEffect(() => {
-        if (quantity < 1) {
-            dispatch(removeFromCart(id));
-        }
-    }, [quantity]);
-
-    const plusQuantiti = () => {
-        dispatch(addToCart(product));
-    }
-
-    const minusQuantiti = () => {
-        dispatch(removeOneItemFromCart(product));
-    }
+    const product = { name, country, img, price, id, quantity };
 
     const handlerRemoveFromCart = () => {
         dispatch(removeFromCart(id));
         dispatch(updateTotalItems());
-        // dispatch(updateSubtotal());
     }
 
     return (
@@ -40,9 +26,7 @@ const CartListItem = ({ name, country, img, price, id, quantity }) => {
                         <div className="cart-list-item__country">Country: {country}</div>
                         <div className="cart-list-item__quantiti">
                             Quantity:
-                            <button className='cart-list-item__quantiti__minus' onClick={minusQuantiti}>-</button>
-                            {quantity}
-                            <button className='cart-list-item__quantiti__plus' onClick={plusQuantiti}>+</button>
+                            <QuantitySelector product={product} />
                         </div>
                     </div>
                 </div>

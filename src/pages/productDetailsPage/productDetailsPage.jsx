@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useHttp } from '../../hooks/http.hook';
 import { Helmet } from 'react-helmet';
-import { useDispatch } from 'react-redux';
-import { addToCart, updateTotalItems } from '../cartPage/cartSlice';
 
 import Title from '../../components/title/Title';
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
+import ButtonAddToCart from '../../components/buttonAddToCart/ButtonAddToCart';
 
 import coffeeBeansIconBlack from "../../icons/coffee-beans-title-black.svg"
 
@@ -17,9 +16,7 @@ const ProductDetailsPage = () => {
 
     const { id } = useParams();
     const [product, setProduct] = useState(null);
-    const [isAdded, setIsAdded] = useState(false);
     const { request } = useHttp();
-    const dispatch = useDispatch();
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -47,18 +44,6 @@ const ProductDetailsPage = () => {
         return <div>Product not found</div>;
     }
 
-    const handleAddToCart = (event) => {
-        event.preventDefault();
-
-        dispatch(addToCart(product));
-        dispatch(updateTotalItems());
-        setIsAdded(true);
-
-        setTimeout(() => {
-            setIsAdded(false);
-        }, 1000);
-    }
-
     return (
         <>
             <Helmet>
@@ -81,11 +66,7 @@ const ProductDetailsPage = () => {
                         <div className="product-details__descr"><span>Description:</span> {product.descr}</div>
                         <div className='product-details__wrapper'>
                             <div className="product-details__price"><span>Price:</span> {`${product.price}$`}</div>
-                            <button
-                                className={`product-details__btn ${isAdded ? "added" : null}`}
-                                onClick={handleAddToCart}>
-                                {isAdded ? 'Added' : 'Add to cart'}
-                            </button>
+                            <ButtonAddToCart product={product} additionalClass="btn-add-to-cart_long" />
                         </div>
                     </div>
                 </div>

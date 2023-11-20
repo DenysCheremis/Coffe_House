@@ -47,34 +47,5 @@
             justify-content: space-between;
             align-items: center;
         }
-
-        &__btn {
-            width: 95px;
-            height: 30px;
-            border-radius: 3px;
-            border: 1px solid #997F57;
-            color: #997F57;
-            background: transparent;
-            font-size: 10px;
-            font-weight: 700;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-
-            &:hover {
-                background-color: #997F57;
-                color: #FFF;
-            }
-        }
-    }
-}
-
-.added {
-    background-color: #44944A;
-    border: 1px solid #44944A;
-    color: white;
-
-    &:hover {
-        background-color: #44944A;
     }
 }

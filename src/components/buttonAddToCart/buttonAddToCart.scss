@@ -1,0 +1,36 @@
+.btn-add-to-cart {
+    margin-left: 5px;
+    width: 95px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #997F57;
+    color: #997F57;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: #997F57;
+        color: #FFF;
+    }
+
+    &_long {
+        margin: 0 30px 0 0;
+        width: 165px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+.added {
+    background-color: #44944A;
+    border: 1px solid #44944A;
+    color: white;
+
+    &:hover {
+        background-color: #44944A;
+    }
+}

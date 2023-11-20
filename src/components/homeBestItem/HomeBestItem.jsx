@@ -1,27 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addToCart, updateTotalItems } from '../../pages/cartPage/cartSlice';
-import { useState } from 'react';
+import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 
 import "./homeBestItem.scss";
 
 const HomeBestItem = ({ img, name, price, id, country }) => {
 
-    const dispatch = useDispatch();
-    const [isAdded, setIsAdded] = useState(false);
-
-    const handleAddToCart = (event) => {
-        event.preventDefault();
-        const product = { img, name, price, id, country };
-
-        dispatch(addToCart(product));
-        dispatch(updateTotalItems());
-        setIsAdded(true);
-
-        setTimeout(() => {
-            setIsAdded(false);
-        }, 1000);
-    }
+    const product = { img, name, price, id, country };
 
     return (
         <Link to={`/products/${id}`} className="best__item">
@@ -29,11 +13,7 @@ const HomeBestItem = ({ img, name, price, id, country }) => {
             <div>
                 <div className="best__item__title">{name}</div>
                 <div className='best__item__wrapper'>
-                    <button
-                        className={`best__item__btn ${isAdded ? "added" : null}`}
-                        onClick={handleAddToCart}>
-                        {isAdded ? 'Added' : 'Add to cart'}
-                    </button>
+                    <ButtonAddToCart product={product} />
                     <div className="best__item__price">{`${price}$`}</div>
                 </div>
             </div>

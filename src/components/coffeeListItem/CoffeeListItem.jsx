@@ -1,27 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addToCart, updateTotalItems } from '../../pages/cartPage/cartSlice';
-import { useState } from 'react';
+import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 
 import "./coffeeListItem.scss";
 
 const CoffeeListItem = ({ img, name, country, price, id }) => {
 
-    const dispatch = useDispatch();
-    const [isAdded, setIsAdded] = useState(false);
-
-    const handleAddToCart = (event) => {
-        event.preventDefault();
-        const product = { img, name, price, id, country };
-
-        dispatch(addToCart(product));
-        dispatch(updateTotalItems());
-        setIsAdded(true);
-
-        setTimeout(() => {
-            setIsAdded(false);
-        }, 1000);
-    }
+    const product = { img, name, price, id, country };
 
     return (
         <Link to={`/products/${id}`} className="coffee-list__item">
@@ -29,11 +13,7 @@ const CoffeeListItem = ({ img, name, country, price, id }) => {
             <div className="coffee-list__item__title">{name}</div>
             <div className="coffee-list__item__country">{country}</div>
             <div className='coffee-list__item__wrapper'>
-                <button
-                    className={`coffee-list__item__btn ${isAdded ? "added" : null}`}
-                    onClick={handleAddToCart}>
-                    {isAdded ? 'Added' : 'Add to cart'}
-                </button>
+                <ButtonAddToCart product={product} />
                 <div className="coffee-list__item__price">{`${price}$`}</div>
             </div>
 
